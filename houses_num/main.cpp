@@ -49,46 +49,6 @@ TEST(HousesTest, NegativeValues) {
 
 
 int main(int argc, char** argv) {
-	 try {
-     std::vector<int> heights = { 1, 3, 2 };
-     std::vector<int> ans = houses(heights);
-
-     for (int i : ans) {
-         std::cout << i << " ";
-     }
-     std::cout << "\n";
-
-     std::vector<float> float_heights = { 1.0, 3.0, 2.0 };
-     std::vector<int> float_ans;
-     try {
-         float_ans = houses(float_heights);
-     }
-     catch (const std::invalid_argument& err) {
-         std::cerr << "Error: " << err.what() << "\n";
-     }
-
-     std::vector<std::string> string_heights = { "1", "3", "2" };
-     std::vector<int> string_ans;
-     try {
-         string_ans = houses(string_heights);
-     }
-     catch (const std::invalid_argument& err) {
-         std::cerr << "Error: " << err.what() << "\n";
-     }
-
-     std::vector<int> empty_heights;
-     try {
-         std::vector<int> empty_ans = houses(empty_heights);
-     }
-     catch (const std::invalid_argument& err) {
-         std::cerr << "Error: " << err.what() << "\n";
-     }
-
-     }
-     catch (const std::invalid_argument& err) {
-         std::cerr << "Error: " << err.what() << "\n";
-     }
-
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
